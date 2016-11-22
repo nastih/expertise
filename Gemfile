@@ -9,6 +9,15 @@ gem 'sqlite3'
 gem 'puma', '~> 3.0'
 
 gem 'haml-rails'
+gem 'better_errors'
+gem 'binding_of_caller'
+
+gem 'font-awesome-sass'
+gem 'font-awesome-rails'
+gem 'jquery-ui-rails'
+gem 'rails-asset-jqueryui'
+gem 'bootstrap-sass', '3.3.6'
+gem 'kaminari'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
