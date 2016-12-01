@@ -8,7 +8,3 @@
   %ul.nav.navbar-nav.pull-right
     %li= link_to t('.home'), root_path
     %li= link_to t('.help'), root_path
-    - if signed_in?
-    %li.logged
-      #{current_user.email}
-    = gravatar_for current_user
