@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'work/index'
+
+  get 'work/choose_theme'
+
+  get 'work/display_theme'
+
+  resources :themes
+  resources :images
+  resources :values
   resources :users
   get 'main/index'
 
