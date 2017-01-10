@@ -1,2 +1,21 @@
-%h1 Main#contacts
-%p Find me in app/views/main/contacts.html.haml
+- provide(:title, "Contacts")
+
+%h1= t('.contacts_title')
+
+.about-copy
+  %h1.list
+    Приложение Experteese разработано в качестве практического материала для изучения курса
+    "Применение альтернативных фреймвоков Ruby_on_Rails".
+    %br
+
+    Предложения по развитию приложения и улучшению его функциональности можно направлять по адресу:
+    zoneiva@gmail.com
+    %br
+
+  %i.fa.fa-flag.iconsMain{ style: "color: #C44BB4; font-size: 4em; position: relative; left: 50%;" }
+
+
+-#%p
+-#  Contact the Ruby on Rails Tutorial about the sample app at the
+-#  = succeed "." do
+-#    %a{:href => "http://www.railstutorial.org/contact"} contact page

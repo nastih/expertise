@@ -1,10 +1,44 @@
 %header.navbar.navbar-fixed-top.navbar-inverse
-  .container.class-name-in-header
-    = link_to t('.logo_title'), root_path, id: 'logo'
+  .container.header
+    = link_to t('.logo_title'), root_path, id: "logo"
     .rails_logo
-      = link_to image_tag('rails.png', alt: 'Rails logo')
 
-%nav
-  %ul.nav.navbar-nav.pull-right
-    %li= link_to t('.home'), root_path
-    %li= link_to t('.help'), root_path
+      %p.locale
+        = link_to image_tag("Russia.png", style: "width: 24px; height: 24px", alt: "", title: "Русский" ), locale: :ru
+        = link_to image_tag("United-Kingdom.png", style: "width: 24px; height: 24px", alt: "", title: "English"), locale: :en
+
+
+
+    %nav
+      %ul.nav.navbar-nav.pull-right
+        %li= link_to t('.home'), root_path
+        - if signed_in?
+          %li.logged
+            #{current_user.email}
+          %li= link_to t('.sign_out'), signout_path, method: "delete"
+
+        - else
+          %li= link_to t('.sign_in'), signin_path
+
+
+        -#%p.locale
+        -#  = link_to_unless I18n.locale == :ru, "Русский", locale: :ru
+        -#  |
+        -#  = link_to_unless I18n.locale == :en, "English", locale: :en
+        -#
+        -#  %b
+        -#    = I18n.locale
+
+
+    -#.dropdown
+    -#  %button.btn.btn-primary.dropdown-toggle{"data-toggle" => "dropdown", :type => "button"}
+    -#    Dropdown Example
+    -#    %span.caret
+    -#  %ul.dropdown-menu
+    -#    %li
+    -#      %a{:href => "#"} HTML
+    -#    %li
+    -#      %a{:href => "#"} CSS
+    -#    %li
+    -#      %a{:href => "#"} JavaScript
+    -#

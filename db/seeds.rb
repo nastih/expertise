@@ -5,130 +5,90 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 
 
 Image.delete_all
 Image.reset_pk_sequence
 Image.create([
 
-                 {name: 'P.-A. Renoir, Бал в Мулен де ла Галетт', file: 'Renoir Бал в Мулен де ла Галлет.jpg', theme_id: 2},
-                 {name: 'P.-A. Renoir, Букет', file: 'Renoir букет.jpg', theme_id: 2},
-                 {name: 'P.-A. Renoir, Девушка с веером', file: 'Renoir Девушка с веером.jpg', theme_id: 2},
-                 {name: 'P.-A. Renoir, Завтрак гребцов', file: 'Renoir ЗАВТРАК ГРЕБЦОВ.jpg', theme_id: 2},
-                 # {name: 'P.-A. Renoir, Зонтики', file: 'Renoir зонтики.jpg', theme_id: 2},
-                 # {name: 'P.-A. Renoir, Лягушатник', file: 'Renoir Лягушатник.jpg', theme_id: 2},
-                 # {name: 'P.-A. Renoir, Мадам Шарпантье', file: 'Renoir Мадам Шарпантье.jpg', theme_id: 2},
-                 # {name: 'P.-A. Renoir, Новый мост в Париже', file: 'Renoir Новый мост в Париже.jpg', theme_id: 2},
-                 # {name: 'P.-A. Renoir, Портрет Жанны Самари', file: 'Renoir Портрет Жанны Самари.jpg', theme_id: 2},
-                 # {name: 'P.-A. Renoir, Речной пейзаж', file: 'Renoir Речной пейзаж.jpg', theme_id: 2},
-                 # {name: 'P. Picasso, Фабрика', file: 'Picasso Fabrique.jpg', theme_id: 3},
-                 # {name: 'H. Matiss, Балерина', file: 'Matiss Балерина.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Вид моря из Коллеура', file: 'Matiss Вид моря из Коллеура.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Гербарий', file: 'Matiss Гербарий.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Дама на терассе', file: 'Matiss Дама на терассе.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Десерт', file: 'Matiss Десерт.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Золотые рыбки', file: 'Matiss Золотые рыбки.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Игра в шарики', file: 'Matiss Игра в шарики.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Музыка', file: 'Matiss Музыка.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Одалистка с турецким стулом', file: 'Matiss Одалистка с турецким стулом.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Портрет Лидии Делекторской', file: 'Matiss Портрет Лидии Делекторской.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Разговор', file: 'Matiss Разговор.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Розовая обнажённая', file: 'Matiss Розовая обнажённая.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Роскошь, покой и наслаждение', file: 'Matiss Роскошь, покой и наслаждение.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Танец', file: 'Matiss Танец.jpg', theme_id: 4},
-                 # {name: 'H. Matiss, Танец 2', file: 'Matiss dance_mattis2.jpg', theme_id: 4},
-                 # {name: 'радуга', file: 'raduga5обрез.jpg', theme_id: 7},
-                 # {name: 'Кандинский В.В., Жёлтое-красное-синее', file: 'Кандинский_ж.к.г_авапг.jpg', theme_id: 5},
-                 # {name: 'A. Raynaud, Ночь', file: 'Рейно_Ночь_класс.jpg', theme_id: 7},
-                 # {name: 'Серый - стандарт', file: 'Серый - середина - стандарт.jpg', theme_id: 7},
-                 # {name: 'Черно-Белый - стандарт', file: 'Черно-Белый - стандарт.jpg', theme_id: 7},
-                 # {name: 'Черный - стандарт', file: 'Черный лист - стандарт.jpg', theme_id: 7},
-                 {name: 'P. Picasso, Авиньонские девицы', file: 'Picasso Авиньонские девицы.jpg', theme_id: 3},
-                 {name: 'P. Picasso, Герника', file: 'Picasso Герника.jpg', theme_id: 3},
-                 {name: 'P. Picasso, Голубь мира', file: 'Picasso Голубь мира.jpg', theme_id: 3},
-                 {name: 'P. Picasso, Дама с веером', file: 'Picasso Дама с веером.jpg', theme_id: 3}
-                 # {name: 'P. Picasso, Испанская пара перед гостиницей', file: 'Picasso Испанская пара перед гостиницей.jpg', theme_id: 3},
-                 # {name: 'P. Picasso, Кот, поедающий птичку', file: 'Picasso Кот, поедающий птичку.jpg', theme_id: 3},
-                 # {name: 'P. Picasso, Любительница абсента', file: 'Picasso Любительница абсента.jpg', theme_id: 3},
-                 # {name: 'P. Picasso, Натюрморт', file: 'Picasso Натюрморт.jpg', theme_id: 3},
-                 # {name: 'P. Picasso, Портрет Доры Маар', file: 'Picasso Портрет Доры Маар.jpg', theme_id: 3},
-                 # {name: 'P. Picasso, Средиземноморский пейзаж', file: 'Picasso Средиземноморский пейзаж.jpg', theme_id: 3},
-                 # {name: 'P. Picasso, Стекляная посуда', file: 'Picasso Стекляная посуда.jpg', theme_id: 3},
-                 # {name: 'V.W. van Gogh, Автопортрет', file: 'van Gogh Автопортрет.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Белый дом ночью', file: 'van Gogh Белый дом ночью.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Куст 2', file: 'van Gogh ван_гог_куст2.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Ветви цветущего миндаля', file: 'van Gogh Ветви цветущего миндаля.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Два срезанных подсолнуха', file: 'van Gogh Два срезанных подсолнуха.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Едоки картофеля', file: 'van Gogh Едоки картофеля.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Звездная ночь', file: 'van Gogh Звездная ночь.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Ирисы', file: 'van Gogh Ирисы.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Куст', file: 'van Gogh куст.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Маковое поле', file: 'van Gogh Маковое поле.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Мост', file: 'van Gogh Мост.jpg', theme_id: 6},
-                 # {name: 'V.W. van Gogh, Натюрморт с картофелем', file: 'van Gogh Натюрморт с картофелем.jpg', theme_id: 6},
-                 # {name: 'Кандинский В.В., Английский сад', file: 'Кандинский Английский сад.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Зимний пезаж', file: 'Кандинский Зимний пезаж.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Зубовская площадь', file: 'Кандинский Зубовская площадь.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Комета', file: 'Кандинский Комета.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Композиция №5', file: 'Кандинский Композиция №5.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Композиция №6', file: 'Кандинский Композиция №6.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Композиция №7', file: 'Кандинский Композиция №7.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Осень', file: 'Кандинский Осень.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Осень в Баварии', file: 'Кандинский Осень в Баварии.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Пейзаж', file: 'Кандинский Пейзаж.jpg', theme_id: 5},
-                 # {name: 'Кандинский В.В., Черные вершины', file: 'Кандинский Черные вершины.jpg', theme_id: 5},
-                 # {name: 'Черный', file: 'Car color black.jpg', theme_id: 8},
-                 # {name: 'Синий', file: 'Car color blue.jpg', theme_id: 8},
-                 # {name: 'Коричневый беж', file: 'Car color brown biege.jpg', theme_id: 8},
-                 # {name: 'Серый', file: 'Car color gray.jpg', theme_id: 8},
-                 # {name: 'Зеленый', file: 'Car color green.jpg', theme_id: 8},
-                 # {name: 'Красный', file: 'Car color red.jpg', theme_id: 8},
-                 # {name: 'Серебряный', file: 'Car color silver.jpg', theme_id: 8},
-                 # {name: 'Розовый техно', file: 'Car color techno_pink.jpg', theme_id: 8},
-                 # {name: 'Белый', file: 'Car color white.jpg', theme_id: 8},
-                 # {name: 'Желтый', file: 'Car color yellow.jpg', theme_id: 8},
-                 # {name: 'Cat eye', file: 'cateye.jpg', theme_id: 7}
+{name: 'Пабло Пикассо. Фигуры на берегу моря', file: 'figury-na-beregu-morea-PICASSO.jpg', theme_id: 2},
+{name: 'Пабло Пикассо. Женщина с поднятыми руками', file: 'jenshina-s podnyatymi-rukami-PICASSO.jpg', theme_id: 2},
+{name: 'Пабло Пикассо. Лежащая обнаженная', file: 'lejashaya-obnajennaya-PICCASO.jpg', theme_id: 2},
+{name: 'Пабло Пикассо. Плачущая женщина', file: 'plachushchaya_zhenshchina-PICASSO.jpg', theme_id: 2},
+{name: 'Пабло Пикассо. Поцелуй', file: 'poceluy-PICASSO.jpg', theme_id: 2},
+{name: 'Пабло Пикассо. Спящая молодая женщина', file: 'spyashchaya_molodaya_zhenshchina-PICASSO.jpg', theme_id: 2},
+{name: 'Пабло Пикассо. Спящая на фоне жалюзи', file: 'spyashchaya_na_fone_zhalyuzi-PICASSO.jpg', theme_id: 2},
+{name: 'Эдвард Мунк. Поцелуй', file: 'potselui-MUNK.jpg', theme_id: 3},
+{name: 'Эдвард Мунк. Поцелуй у окна', file: 'potselui-u-okna-MUNK.jpg', theme_id: 3},
+{name: 'Эдвард Мунк. Голос. Летняя ночь', file: 'golos-letnyaya-nochi-MUNK.jpg', theme_id: 3},
+{name: 'Эдвард Мунк. Крик', file: 'krik-MUNK.jpg', theme_id: 3},
+{name: 'Эдвард Мунк. Меланхолия', file: 'melankholiya-MUNK.jpg', theme_id: 3},
+{name: 'Эдвард Мунк. Под звездами', file: 'pod-zvezdami-MUNK.jpg', theme_id: 3},
+{name: 'Эдвард Мунк. Больной ребенок', file: 'bolinoy-rebenok-MUNK.jpg', theme_id: 3},
+{name: 'Сальвадор Дали. Геополитическое дитя, наблюдающее рождение нового человека', file: 'geopoliticheskoe-ditya-nablyudayushee-rojdenie-novogo-cheloveka-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Жираф в огне', file: 'jiraf-v-ogne-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Лицо войны', file: 'litso-voiny-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Мягкий автопортрет с жаренной ветчиной', file: 'myagkii-avtoportret-s-jarennoi-vetchinoi-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Оазис', file: 'oazis-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Постоянство памяти', file: 'postoyanstvo-pamyati-DALI.jpeg', theme_id: 4},
+{name: 'Сальвадор Дали. Призрак Вермера Дельфского который можно использовать как стол', file: 'prizrak-vermera-delftskogo-kotoryi-mojno-ispolzovati-kak-stol-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Рука угрызения совести', file: 'ruka-ugryzeniya-sovesti-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Сон', file: 'son-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Сон вызванный полетом пчелы вокруг граната за секунду до пробуждения', file: 'son-vyzvannyi-poletom-pchely-vokrug-granata-za-sekundu-do-probujdeniya-DALI.jpg', theme_id: 4},
+{name: 'Сальвадор Дали. Вечерний паук сулит надежду', file: 'vechernii-pauk-sulit-nadejdu-DALI.jpg', theme_id: 4},
+{name: 'Фрида Кало. Автопортрет посвященный доктору Алоессеру', file: 'avtoportret-posvyashennyi-doctoкu-aloesseru-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Автопортрет с ожерельем из терновника и колибри', file: 'avtoportret-s-ojereliem-iz-ternovnika-i-kolibri-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Автопортрет с распущенными волосами', file: 'avtoportret-s-raspushennymi-volosami-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Без надежды', file: 'bez-nadejdy-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Фрида и Диего Ривейра ', file: 'frida-i-diego-riveira-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Летающая кровать', file: 'letayushaya-krovati-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Мои бабушка и дедушка, родители и я. Генеалогическое древо', file: 'moi babushka i dedushka roditeli i ya genealogicheskoe drevo-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Сломанная колонна', file: 'slomannaya-kolonna-FRIDA.jpg', theme_id: 5},
+{name: 'Фрида Кало. Я и Я. Две Фриды', file: 'ya-i-ya dve fridy FRIDA.jpg', theme_id: 5},
+{name: 'Огюст Ренуар. Бухта Мулен УЭ, осров Гернси ', file: 'buhta mulen ue ostrov gernsi RENUAR.jpg', theme_id: 6},
+{name: 'Огюст Ренуар. Букет роз', file: 'buket-roz-RENUAR.jpeg', theme_id: 6},
+{name: 'Огюст Ренуар. Море и скалы', file: 'more-i-skaly-RENUAR.jpg', theme_id: 6},
+{name: 'Огюст Ренуар. На берегу моря. Алина Шариго', file: 'na-beregu-morea-alina-sharigo-RENUAR.jpg', theme_id: 6},
+{name: 'Огюст Ренуар. Танец в Буживале', file: 'tanets-v-bujivale-RENUAR.jpg', theme_id: 6},
+{name: 'Огюст Ренуар. Вид на острове Гернси', file: 'vid-na-ostrove-gernsi-RENUAR.jpg', theme_id: 6},
+{name: 'Огюст Ренуар. Закат', file: 'zakat-v-duarnene-RENUAR.jpg', theme_id: 6}
 
-             ])
+])
 
 Theme.delete_all
 Theme.reset_pk_sequence
 Theme.create([
+  
+{name: "-----"}, # 1
+{name: "Какие из представленных картин Пабло Пикассо являются наиболее ценными для коллекционеров живописи?"}, # 2
+{name: "Какие из представленных картин Эдварда Мунка являются наиболее ценными для коллекционеров живописи?"}, # 3
+{name: "Какие из представленных картин Сальвадора Дали являются наиболее ценными для коллекционеров живописи?"}, # 4
+{name: "Какие из представленных картин Фриды Кало являются наиболее ценными для коллекционеров живописи?"}, # 5
+{name: "Какие из представленных картин Огюста Ренуара являются наиболее ценными для коллекционеров живописи?"} # 6
 
-                 {name: "-----"},      # 1
-                 {name: "Какое из произведений художника О.Ренуара наилучшим образом характеризует его творчество?"},      # 2
-                 {name: "Какое из произведений художника П.Пикассо наилучшим образом характеризует его творчество?"}      # 3
-                 # {name: "Какое из произведений художника А.Матисса наилучшим образом характеризует его творчество?"},      # 4
-                 # {name: "Какое из произведений художника В.Кандинского наилучшим образом характеризует его творчество?"},  # 5
-                 # {name: "Какое из произведений художника В.ван Гога наилучшим образом характеризует его творчество?"},     # 6
-                 # {name: "Какое из изображений является наиболее гармоничным по вашему восприятию?"},                       # 7
-                 # {name: "Какой цвет автомобиля является наиболее популярным в этом году?"}                                 # 8
 
-             ])
+])
 
 
 Value.delete_all
 Value.reset_pk_sequence
 
-#
-# User.delete_all
-# User.reset_pk_sequence
-# User.create([
-#
-#                 {name: "Алексей", email: "zoneiva@gmail.com", password: "222222", password_confirmation: "222222"},
-#                 {name: "Петр", email: "blookho@gmail.com", password: "222222", password_confirmation: "222222"},
-#                 {name: "Анна", email: "annach61@mail.ru", password: "222222", password_confirmation: "222222"},
-#                 {name: "Example User", email: "example@railstutorial.org", password: "222222", password_confirmation: "222222"},
-#                 {name: "Федор", email: "fedor@yandex.ru", password: "222222", password_confirmation: "222222"}
-#
-#             ])
-#
 
+User.delete_all
+User.reset_pk_sequence
+User.create([
+  
+{name: "Admin", email: "admin@admin.ru", password: "123456", password_confirmation: "123456"}
+
+])
+
+
+
+Micropost.delete_all
+Micropost.reset_pk_sequence
+Micropost.create([
+  
+{content: 'Привет! Я хотел бы поработать здесь!', user_id: 1, created_at: '2016-09-03 09:00:51.675013'}
+
+])
 

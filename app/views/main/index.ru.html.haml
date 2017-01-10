@@ -1,0 +1,12 @@
+- content_for(:title,  "Index")
+
+%h1
+.center.jumbotron
+  %h1 Оставьте свою оценку по теме
+  %h2 Приложение для экспертов.
+
+  - if signed_in?
+    = link_to "Начать", work_path, class: "btn btn-lg btn-primary"
+  - else
+    = link_to "Регистрация", signup_path, class: "btn btn-lg btn-primary"
+

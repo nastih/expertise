@@ -1,12 +1,22 @@
-%p#notice= notice
+- provide(:title, @user.name)
+-#%p#notice= notice
 
-%p
-  %b Name:
-  = @user.name
-%p
-  %b Emqil:
-  = @user.emqil
 
-= link_to 'Edit', edit_user_path(@user)
-\|
-= link_to 'Back', users_path
+.show_user
+  .row
+    %aside.span4
+      %section
+        %h1
+          = gravatar_for @user
+          = @user.name
+
+  %p
+    %b= t('.email')
+    = @user.email
+
+  = link_to t('.work'), work_path, class: "btn btn-lg btn-primary"
+
+  -#
+  -#= link_to 'Edit', edit_user_path(@user)
+  -#\|
+  -#= link_to 'Back', users_path

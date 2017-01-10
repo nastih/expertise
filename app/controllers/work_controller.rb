@@ -1,32 +1,23 @@
 class WorkController < ApplicationController
   require 'json'
   include WorkImage
-
+  
   def index
     @images_count = Image.all.count
-    # @selected_theme = "Select theme to leave your answer"
     @selected_theme = t(".def_select_theme")
-    @selected_image_name = 'радуга'
+    @selected_image_name = ''
     @values_qty = Value.all.count
     @current_locale = I18n.locale
-
+    
     session[:selected_theme_id] = @selected_theme # to display nothing
   end
 
-  # @note: use in views
+  # Метод выбирает все Темы для оценивания экспертами
   def choose_theme
-
-    # @current_locale = params[:locale]
-    # logger.info "In WorkController#choose_theme @@current_locale = #{@current_locale}"
-    # session[:current_locale] = @current_locale
-
     @themes = Theme.all.pluck(:name)
-    logger.info "In WorkController#choose_theme @themes = #{@themes}"
-    respond_to :js
+    respond_to :js # Белый список форматов, на которые отвечает метод
   end
 
-
-  # @note: first display_theme and show first image from image array
   def display_theme
     logger.info "In work#display_theme"
     @image_data = {}
@@ -34,24 +25,32 @@ class WorkController < ApplicationController
 
     current_user_id = current_user.id
     if params[:theme] == "-----" #.blank?
-      theme = t(".select_theme") #"Select theme to leave your answer"
-      theme_id = 1
-      values_qty = Value.all.count.round
-      data = { index: 0, name: 'радуга', values_qty: values_qty,
-               file: 'raduga5обрез.jpg', image_id: 4,
-               current_user_id: current_user_id, user_valued: false,
-               common_ave_value: 0, value: 0 }
+      theme = t(".select_theme") # theme = "Выберите тему для оценки"
+      theme_id = 1 # Первая тема
+      values_qty = Value.all.count.round # Выбираем количество оценок из базы
+      data = { index: 0,
+               name: 'Выберите тему для оценки',
+               values_qty: values_qty,
+               current_user_id: current_user_id,
+               theme_id: 1,
+               file: 'welcome-image.jpg',
+               image_id: 4,
+
+               user_valued: false,
+               common_ave_value: 0,
+               value: 0 }
     else
       theme = params[:theme]
-      theme_id = Theme.find_theme_id(theme)
+      theme_id = Theme.find_theme_id(theme) # Находим id темы по значению параметра из формы
       data = show_image(theme_id, 0)
     end
+
     session[:selected_theme_id] = theme_id
     image_data(theme, data)
-
+    
   end
 
-
+  
   # @note: this method should show image without diag
   #   then - start to calculate diag
   def results_list

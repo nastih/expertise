@@ -1,0 +1,12 @@
+- content_for(:title,  "Index")
+
+%h1
+.center.jumbotron
+  %h1 Leave your evaluation on theme
+  %h2 App for experts.
+
+  - if signed_in?
+    = link_to "Begin!", work_path, class: "btn btn-lg btn-primary"
+  - else
+    = link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary"
+

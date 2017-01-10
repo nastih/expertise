@@ -1,0 +1,75 @@
+.image
+  .row
+    .col-md-3
+      .left_controls
+        -# Выбор темы
+        .select_theme
+          = render 'work/button_theme_select', locale: @current_locale
+          %br
+        -# Ссылка на результаты по голосования
+        .modal_list_results
+          = render 'work/button_list_results'
+          %br
+        -# Общее количество оценок
+        %span.common_value
+          = t('.common_value')
+          %h2.common{:title => "Common value"}
+        %span.total_values
+          = t('.total_values')
+          %h2.total{:title => "Total values"} #{@values_qty.round}
+
+    .col-md-9
+      .image_display
+        .row.image
+
+          .col-md-12
+            -# Тема для оценки
+            %h2.up-theme{:title => t('.theme_name')}
+              #{@selected_theme}
+
+          .col-md-12
+            -# Название изображения
+            %h2.up{:title => t('.image_file_name')}
+              #{@selected_image_name}
+
+          .col-md-1
+            -# Левая стрелка
+            .img-left-side
+              %h3{:title => "list to previous image"}
+                %i.fa.fa-chevron-circle-left{"aria-hidden" => "true"}
+
+          .col-md-10
+            -# Картинка
+            .img-center{:title => t('.default_image')}
+              %img{:alt => "Default Image", :src => 'assets/pictures/welcome-image.jpg', :title => t('.default_image'),:style => "width:100%; height:100%;" }
+              .image_user_value{:title => "Expert value"}
+
+          .col-md-1
+            -# Правая стрелка
+            .img-right-side
+              %h3{:title => "list to next image"}
+                %i.fa.fa-chevron-circle-right
+
+        .row.diag
+          .col-md-12
+            .image_diag
+
+
+              %h2.down{:title => "Value scale"}
+                = t(".make_decision")
+              %span#chosen_value 70
+              %button.button__results.save{:title => "Save image diag results"}
+                %a{"data-remote" => "true", :format => "js", :href => "#", :title => "Save image diag results"}
+                  = t(".save_decision")
+
+              %p.left 5%
+              -# Нижний слайдер
+              #slider
+                %input#slide{:max => "100", :min => "5", :value => "70",
+                             :onchange => "updateSlider(this.value)",
+                             :step => "5", :type => "range"}
+              %p.right 100%
+              %br
+
+
+

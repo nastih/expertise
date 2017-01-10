@@ -1,11 +1,51 @@
 !!!
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title Expertise
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:name => "viewport", :content => "text/html; charset=UTF-8, width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"}
+      -#%title Experteese
+    -#%title
+      = "#{yield(:title)} | Experteese"
+      -#= content_for?(:title) ? yield(:title) : "Experteese"
+    -#%title= content_for?(:title) ? "#{full_title(yield(:title))} | Experteese" : "Experteese"
+    %title= "#{full_title(yield(:title))}"
+    = action_cable_meta_tag
+    -#%title<
+    -#  = yield(:title)
+    -#  | Experteese
+    -#%h1
+    -#  = yield(:title)
+    %meta{name: "viewport", content: "initial-scale=1, text/html; charset=utf-8,user-scalable=no,maximum-scale=1,width=device-width" }
+    %meta{name: "description", content: "This is an Expert tool. You may leave your expert opinion to selected theme. Выбери тему и оставь свое экспертное мнение по ней."}/
+    %meta{name: "keywords", content: "This is where you put all of the keywords you use in your site"}/
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+    -#/ %link{:href => "//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", :rel => "stylesheet"}
+    -#/ %link{:href => "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css", :rel => "stylesheet"}
+    -#%link{:href => "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css", :rel => "stylesheet"}/
+    -#/ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
+
+
+    -#%script{:src => "https://code.jquery.com/jquery-1.12.0.min.js"}
+
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"}
+    -#%script{:src => "http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"}
+    = javascript_include_tag 'application'
+    -#, 'data-turbolinks-track': 'reload'
+
+    = render 'layouts/shim'
+    -#[if lt IE 9]>
+    -#%script{:src => "//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"}
+    -#[endif]
+
   %body
+    #overlay{style:'display:none;'}
     = render 'shared/header'
-    = yield
+    .container
+      = render 'shared/flash'
+      = yield
+    -#= render 'shared/footer'
+
+    -#= debug(params) if Rails.env.development?
+    -#= yield :debugger

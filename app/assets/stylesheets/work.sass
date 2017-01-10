@@ -1,0 +1,489 @@
+@import "mixins"
+i
+  height: 1.5em
+  font-size: 1.5em
+
+i:hover:not(:disabled)
+  cursor: pointer
+  border: rgba(255, 233, 138, 0.70)
+  color: #555fbe
+  h2.up
+    color: #555fbe
+
+
+button
+  font-family: $helvetica
+  font-size: 1.5em
+
+.button__left
+  height: 2em
+  width: 80%
+  position: relative
+  left: 10%
+  text-align: center
+
+  .modalBtn
+    margin-top: .1em
+
+  .theme
+    margin-top: 1.2em
+
+
+.button__choose
+  color: #82A1C4
+  height: 2.2em
+  box-shadow: 3px 3px 4px #ACC9E5
+  background: rgba(222, 165, 242, 0.29)
+  width: 60%
+  text-align: center
+  border: rgba(219, 255, 219, 0.70)
+  padding: 0 10px
+  margin-bottom: 1.5em
+  font-size: 1.1em
+
+.button__results.save
+  height: 2em
+  width: 20%
+  margin-top: .5em
+  display: block
+  cursor: auto
+  text-decoration: none
+  float: left
+  margin-left: 8em
+  margin-bottom: .6em
+  a
+    text-decoration: none
+    color: #666666
+
+.button__results.save:hover:not(:disabled)
+  a
+    text-decoration: none
+    color: #666666
+
+
+.image
+  $img-small-height: 1.1em
+
+  .left_controls
+    border: solid 1px #ffffff
+    display: block
+    background: #ffffff
+    color: $gray-darker
+    height: 45em
+    width: 100%
+    margin-top: 2em
+
+    &:hover
+      border: solid 1px #ffffff
+
+
+
+    span.common_value, .total_values
+      text-align: center
+      position: relative
+      color: #666666
+      font-size: 1.5em
+      top: 4em
+      display: none
+      height: 3em
+
+      h2
+        border-radius: 10px
+        text-align: center
+        color: red
+        font-weight: bold
+        font-size: large
+        display: inline-block
+
+
+      h2.common
+        width: 45px
+        padding-top: 10px
+        padding-bottom: 10px
+
+    span.total_values
+      display: block
+
+      h2.total
+        width: inherit //45px
+        padding: 10px
+
+
+
+
+    input.load_image
+      color: $gray-darker
+
+    select#theme
+      margin-bottom: 10px
+
+    .select_theme
+      display: block
+      height: 6em
+      margin-top: 9em
+
+      .form_select
+        display: block
+        color: #666666
+        width: 80%
+        height: 6em
+        position: relative
+        text-align: center
+        left: 10%
+        font-family: $helvetica
+        font-size: 1.3em
+
+        input
+          color: #3475BE
+          background: rgba(222, 165, 242, 0)
+          padding: 0
+          font-size: .9em
+          height: 1.5em
+          -webkit-transition: background-color 0.3s ease-in-out
+          -moz-transition: background-color 0.3s ease-in-out
+          -o-transition: background-color 0.3s ease-in-out
+          transition: background-color 0.3s ease-in-out
+          cursor: pointer
+
+        select
+          padding: 0.5em
+
+    .select_image
+      display: block
+      height: 10em
+      margin-top: .1em
+
+      .form_select
+        display: block
+        color: #4863be
+        width: 80%
+        height: 5.5em
+        position: relative
+        text-align: center
+        left: 11%
+        font-family: $helvetica
+        font-size: 1.5em
+        margin-top: 2.5em
+
+        input
+          color: #3475BE
+          background: rgba(222, 165, 242, 0)
+          padding: 0
+          font-size: .9em
+          height: 1.5em
+          -webkit-transition: background-color 0.3s ease-in-out
+          -moz-transition: background-color 0.3s ease-in-out
+          -o-transition: background-color 0.3s ease-in-out
+          transition: background-color 0.3s ease-in-out
+          cursor: pointer
+
+
+    .image_input_form
+      height: 18em
+      font-size: 1.5em
+      color: #4863be
+      display: block
+      position: relative
+      width: 80%
+      text-align: center
+      left: 11%
+      margin-top: 1.5em
+
+      input
+        color: #3475BE
+        background-color: #F5F5F5
+        padding: 0
+        font-size: .9em
+        height: 1.5em
+        -webkit-transition: background-color 0.3s ease-in-out
+        -moz-transition: background-color 0.3s ease-in-out
+        -o-transition: background-color 0.3s ease-in-out
+        transition: background-color 0.3s ease-in-out
+        cursor: text
+
+
+      .file_url
+        padding: 0
+        position: relative
+        margin-bottom: 1.15em
+        opacity: 0.4
+
+        input
+          background-color: #F5F5F5
+
+      .file_url:hover
+        opacity: 1
+
+        input[type="text"]:hover
+          border: 1px solid #438F43
+
+      .file_device
+        padding: 0
+        position: relative
+        opacity: 0.4
+
+        input
+          background-color: #F5F5F5
+      .file_device:hover
+        opacity: 1
+
+
+      .button__choose input
+        background-color: rgba(222, 165, 242, 0)
+        cursor: pointer
+
+
+    .select_image_hide
+      display: none
+
+    a
+      text-decoration: none
+      color: #666666
+
+
+  .image_display
+    position: relative
+    margin: 0 0 10px 0
+    border: solid 1px #eaeaea
+    background: #eaeaea
+    color: gray
+    margin-top: 2em
+    &:hover
+      border: solid 1px #eaeaea
+
+
+    h2.up-theme
+      font-family: $helvetica
+      text-align: center
+      color: #666666
+      margin: 10px
+      cursor: default
+      height: 2.1em
+      font-size: 2em
+
+    h2.up
+      font-family: $helvetica
+      text-align: left
+      color: #666666
+      cursor: default
+      position: relative
+      left: 8%
+      width: 82%
+      margin-top: 15px
+      margin-bottom: 5px
+      margin-left: 5px
+      margin-right: 5px
+      font-size: 1.5em
+
+    .img-left-side
+      display: none
+      margin-left: 1.35em
+      &hover
+        background-color: #9bb2fc
+    h3
+      color: #2094a6
+      text-align: center
+      text-shadow: rgba(13, 178, 159, 0.24)
+      font-size: 2.6em
+
+    .img-right-side
+      display: none
+      margin-left: -70%
+
+    @-webkit-keyframes fadeIn
+      from
+        opacity: 0.3
+      to
+        opacity: 1
+
+    @keyframes fadeIn
+      from
+        opacity: 0.3
+      to
+        opacity: 1
+
+    @-webkit-keyframes displayIn
+      from
+        display: none
+      to
+        display: block
+
+    @keyframes displayIn
+      from
+        display: none
+      to
+        display: block
+
+
+    .img-center
+      display: block
+      position: relative
+      text-align: center
+      object-fit: fill
+
+      .img-title
+        display: none
+
+      h2.up
+        color: #555fbe
+      .img-title
+        display: block
+        box-sizing: content-box
+        color: #c3ffff
+        position: absolute
+        top: 2em
+        margin: 0
+        height: 100%
+        width: 100%
+        text-align: center
+        font-size: 2.7em
+        line-height: 3em
+
+
+    .image_user_value
+      text-align: center
+      color: red
+      font-weight: bold
+      padding-top: .6em
+      display: none
+      left: 45%
+      top: -5%
+      width: 47px
+      height: 47px
+      border-radius: 22px
+      position: relative
+      font-size: 24px
+
+    .image_diag
+      display: none
+      position: relative
+      border: solid 1px #eaeaea
+      background: #eaeaea
+      height: 8.6em
+      color: #666666
+      text-align: center
+      font-family: $helvetica
+      top: 3.65em
+      &:hover
+        border: solid 1px #eaeaea
+
+      .indicator
+        background: #deb2ad
+        text-align: center
+
+        .outer-circle
+          display: none
+
+          left: 10.5%
+
+          border: 25px solid #ECEBFA
+          width: 30px
+          height: 30px
+          border-radius: 25px
+          position: relative
+
+          &:hover
+            -webkit-box-shadow: 0 0 30px 15px #453D9B
+            -moz-box-shadow: 0 0 30px 15px #453D9B
+            box-shadow: 0 0 30px 15px #453D9B
+
+        .outer-circle.show
+          display: block
+          border-radius: 30px
+          border: 30px solid #30fa29
+          left: 43.75%
+
+
+      h2.down
+        font-family: $helvetica
+        color: #666666
+        display: block
+        font-size: 1.5em
+        margin-left: 1em
+        margin-bottom: 0
+        float: left
+        margin-top: .85em
+
+      .scale
+        display: none
+        width: 100%
+        background-color: lightgrey
+        line-height: .1em
+        position: relative
+        top: .9em
+        background: linear-gradient(to right, rgba(247, 27, 27, 0.68), rgba(165, 165, 0, 0.68), rgba(27, 247, 27, 0.68))
+
+        .small_img_box
+          display: block
+          width: 1.35em
+          height: 100%
+          left: 20.75%
+          vertical-align: top
+          background-color: #b5d31c
+          position: relative
+          padding: 0
+          margin: 0
+          %img
+            display: none
+            vertical-align: top
+            width: 100%
+            height: 100%
+            line-height: $img-small-height
+            padding: 0
+            margin: 0
+
+.results_list
+  position: relative
+  margin-top: .7em
+  margin-bottom: auto
+  margin-left: auto
+  margin-right: auto
+  padding: .4em
+  color: #000055
+  width: 95%
+  background-color: #f9eddb
+  box-shadow: 0 0 10px 1px rgba(79, 130, 128, 0.1)
+  border: 1px solid #CACAE2
+  border-radius: .5em
+  h2
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    font-size: 2.3em
+
+  nav span
+    font-size: 1.3em
+    font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif
+    text-shadow: 1px 1px 13px rgb(60, 10, 235)
+
+a.btn.btn-lg.btn-primary
+  margin-left: 1.7em
+  margin-top: 1em
+
+.pagination
+  position: relative
+  left: 55%
+  margin: 0
+  font-size: 1.5em
+
+table
+  border-collapse: collapse
+  margin: 0.75em 1.5em
+  width: 95%
+  position: relative
+  left: 3%
+  tr > td
+    margin-top: 2.1em
+
+  tbody
+    margin-left: 0.5em
+    margin-right: 0.5em
+
+
+tr.one_row > td
+  padding-bottom: 1em
+  font-size: 1.5em
+
+  th
+    text-align: center
+  td
+    font-size: 1.5em
+
